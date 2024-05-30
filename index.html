@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>App-Inventário</title>
+</head>
+<body>
+    <div id="formulario" class="fundo">
+        <h1>Inventario - Disk</h1>
+    
+        <!--<label>N° item</label><input id="Rollbox" type="text"><br><br>-->
+        <label for="Namebox">Produto</label>
+        <input id="Namebox" type="text" placeholder="nome do produto">
+        <label for="Secbox">Unidade</label>
+        <input id="Secbox" type="number" placeholder="0">
+        <label for="ml">ml</label>
+        <input id="ml" type="number" placeholder="0">
+        <label for="kg">Kg</label>
+        <input id="kg" type="number" placeholder="0.0">
+        <label for="fabricado">Fabricado</label>
+        <input id="fabricado" type="date">
+        <label for="validade">Validade</label>
+        <input id="validade" type="date">
+        <label for="obs">Observação</label>
+        <input id="obs" type="text" placeholder="obs:">
+    
+        <hr>
+        <button id="Insbtn">Enviar</button>
+        <button id="Selbtn">Visualizar</button>
+        <button id="Updbtn">Atualizar</button>
+        <button id="Delbtn">Remover</button>
+
+        <li>Visualizar: digite o nome do produto e depois clique em visualizar (só será visualizado caso foi enviado)</li>
+        <li>Atualizar: com a visualização dos dados caso queira atualizar algo.</li>
+    
+</div>    
+    <script type="module" src="index.js"></script>
+</body>
+</html>

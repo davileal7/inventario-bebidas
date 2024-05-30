@@ -1,0 +1,61 @@
+#formulario {
+    display: block;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 0px;
+    max-width:  400px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+#formulario label {
+    display: block;
+}
+
+.fundo {
+    color: white;
+    background: rgb(48, 77, 88);
+   
+}
+
+label {
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input {
+    border-radius: 5px;
+    height: 20px;
+    cursor: pointer;
+    margin: 3px;
+}
+
+#Secbox,
+#ml,
+#kg {
+    width: 65px;
+}
+
+button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 40px;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 1px 1px 1px black;
+}
+
+button:hover {
+    opacity: 0.5;
+    transition: 1s;
+}
+
+#Insbtn {
+    background-color: rgb(77, 184, 80);
+    color: white;
+}
+
+#Delbtn {
+    background-color: red;
+}
