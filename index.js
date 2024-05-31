@@ -30,6 +30,7 @@
  var kg = document.getElementById("kg")
  var fabricado = document.getElementById("fabricado")
  var validade = document.getElementById("validade")
+ var observacao = document.getElementById("obs")
 
 
  var insBtn = document.getElementById("Insbtn")
@@ -40,13 +41,12 @@
 //--------------ENVIAR----------------------------------------------//
  function InserirDado(){
      set(ref(db, "Inventario/"+ produto.value), {
-        
-         Produto: produto.value,
          Unidade: unidade.value,
          ml: ml.value,
          kg: kg.value,
          Fabricado: fabricado.value,
          Validade: validade.value,
+         Observação: observacao.value
          
      }).then(() => {
         alert("Produto enviado") 
@@ -68,6 +68,7 @@
              kg.value = snapshot.val().kg;
              fabricado.value = snapshot.val().Fabricado;
              validade.value = snapshot.val().Validade;
+             observacao.value = snapshot.val().Observação;
          }
          else {
              alert("Produto não encontrado, digite o mesmo nome que foi enviado")
@@ -106,7 +107,7 @@
  insBtn.addEventListener('click', InserirDado)
  selBtn.addEventListener('click', SelectData)
  updBtn.addEventListener('click', Update)
- delBtn.addEventListener('click', Delete)
+ 
 
 
 
