@@ -23,6 +23,8 @@
 //--------------Referencias----------------------------------------------//
  var num_item = document.getElementById("Rollbox")
  var produto = document.getElementById("Namebox")
+ var alimentos = document.getElementById("Alimentosbox")
+ 
  var unidade = document.getElementById("Secbox")
  var genbox = document.getElementById("Genbox")
 
@@ -34,6 +36,7 @@
 
 
  var insBtn = document.getElementById("Insbtn")
+ var aliBtn = document.getElementById("Alibtn")
  var selBtn = document.getElementById("Selbtn")
  var updBtn = document.getElementById("Updbtn")
  var delBtn = document.getElementById("Delbtn")
@@ -47,13 +50,27 @@
          Fabricado: fabricado.value,
          Validade: validade.value,
          Observação: observacao.value
-         
      }).then(() => {
-        alert("Produto enviado") 
+        alert("Produto Bebida enviado") 
      }).catch((error)=> {
          alert("falha, error"+error)
      })
  }
+
+ function InserirAlimento(){
+    set(ref(db, "Inventario/"+ alimentos.value), {
+        Unidade: unidade.value,
+        ml: ml.value,
+        kg: kg.value,
+        Fabricado: fabricado.value,
+        Validade: validade.value,
+        Observação: observacao.value
+    }).then(() => {
+       alert("Produto Alimenticios enviado") 
+    }).catch((error)=> {
+        alert("falha, error"+error)
+    })
+}
 
 //--------------Select Datas----------------------------------------------//
  
@@ -62,7 +79,6 @@
 
      get(child(dbref,"Inventario/"+ produto.value)).then((snapshot) => {
          if(snapshot.exists()){
-             produto.value = snapshot.val().Produto;
              unidade.value = snapshot.val().Unidade;
              ml.value = snapshot.val().ml;
              kg.value = snapshot.val().kg;
@@ -81,12 +97,12 @@
 //--------------UPDATE----------------------------------------------//
  function Update() {
      update(ref(db, "Inventario/"+ produto.value), {
-        Produto: produto.value,
         Unidade: unidade.value,
         ml: ml.value,
         kg: kg.value,
         Fabricado: fabricado.value,
         Validade: validade.value,
+        Observação: observacao.value
      }).then(() => {
         alert("Dados do produto atualizado no banco de dados.")             
      }).catch((error)=> {
@@ -105,6 +121,7 @@
  }        
 
  insBtn.addEventListener('click', InserirDado)
+ aliBtn.addEventListener('click', InserirAlimento)
  selBtn.addEventListener('click', SelectData)
  updBtn.addEventListener('click', Update)
  

@@ -18,6 +18,13 @@
    
 }
 
+#Namebox,
+#Alimentosbox {
+    height: 25px;
+    width: 270px;
+    border-radius: 5px;
+}
+
 label {
     font-size: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -53,6 +60,10 @@ button:hover {
 
 #Insbtn {
     background-color: rgb(77, 184, 80);
+    color: white;
+}
+#Alibtn{
+    background-color: rgb(195, 67, 195);
     color: white;
 }
 
