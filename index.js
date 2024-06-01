@@ -21,13 +21,11 @@
 
  const db = getDatabase();
 //--------------Referencias----------------------------------------------//
- var num_item = document.getElementById("Rollbox")
+
  var produto = document.getElementById("Namebox")
  var alimentos = document.getElementById("Alimentosbox")
- 
  var unidade = document.getElementById("Secbox")
- var genbox = document.getElementById("Genbox")
-
+ 
  var ml = document.getElementById("ml")
  var kg = document.getElementById("kg")
  var fabricado = document.getElementById("fabricado")
@@ -39,11 +37,11 @@
  var aliBtn = document.getElementById("Alibtn")
  var selBtn = document.getElementById("Selbtn")
  var updBtn = document.getElementById("Updbtn")
- var delBtn = document.getElementById("Delbtn")
+ 
 
 //--------------ENVIAR----------------------------------------------//
  function InserirDado(){
-     set(ref(db, "Inventario/"+ produto.value), {
+     set(ref(db, "Bebidas/"+ produto.value), {
          Unidade: unidade.value,
          ml: ml.value,
          kg: kg.value,
@@ -57,27 +55,13 @@
      })
  }
 
- function InserirAlimento(){
-    set(ref(db, "Inventario/"+ alimentos.value), {
-        Unidade: unidade.value,
-        ml: ml.value,
-        kg: kg.value,
-        Fabricado: fabricado.value,
-        Validade: validade.value,
-        Observação: observacao.value
-    }).then(() => {
-       alert("Produto Alimenticios enviado") 
-    }).catch((error)=> {
-        alert("falha, error"+error)
-    })
-}
 
 //--------------Select Datas----------------------------------------------//
  
  function SelectData(){
      const dbref = ref(db);
 
-     get(child(dbref,"Inventario/"+ produto.value)).then((snapshot) => {
+     get(child(dbref,"Bebidas/"+ produto.value)).then((snapshot) => {
          if(snapshot.exists()){
              unidade.value = snapshot.val().Unidade;
              ml.value = snapshot.val().ml;
@@ -96,7 +80,7 @@
 
 //--------------UPDATE----------------------------------------------//
  function Update() {
-     update(ref(db, "Inventario/"+ produto.value), {
+     update(ref(db, "Bebidas/"+ produto.value), {
         Unidade: unidade.value,
         ml: ml.value,
         kg: kg.value,
@@ -112,7 +96,7 @@
 
 //--------------DELETE----------------------------------------------//
  function Delete() {
-     remove(ref(db, "Inventario/"+ produto.value), {
+     remove(ref(db, "Bebidas/"+ produto.value), {
      }).then(() => {
      alert("item removido") 
      }).catch((error)=> {
@@ -121,7 +105,6 @@
  }        
 
  insBtn.addEventListener('click', InserirDado)
- aliBtn.addEventListener('click', InserirAlimento)
  selBtn.addEventListener('click', SelectData)
  updBtn.addEventListener('click', Update)
  
