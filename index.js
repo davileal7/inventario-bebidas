@@ -34,7 +34,6 @@
 
 
  var insBtn = document.getElementById("Insbtn")
- var aliBtn = document.getElementById("Alibtn")
  var selBtn = document.getElementById("Selbtn")
  var updBtn = document.getElementById("Updbtn")
  
@@ -47,7 +46,7 @@
          kg: kg.value,
          Fabricado: fabricado.value,
          Validade: validade.value,
-         Observação: observacao.value
+         Observacao: observacao.value
      }).then(() => {
         alert("Produto Bebida enviado") 
      }).catch((error)=> {
@@ -68,7 +67,7 @@
              kg.value = snapshot.val().kg;
              fabricado.value = snapshot.val().Fabricado;
              validade.value = snapshot.val().Validade;
-             observacao.value = snapshot.val().Observação;
+             observacao.value = snapshot.val().Observacao;
          }
          else {
              alert("Produto não encontrado, digite o mesmo nome que foi enviado")
@@ -86,7 +85,7 @@
         kg: kg.value,
         Fabricado: fabricado.value,
         Validade: validade.value,
-        Observação: observacao.value
+        Observacao: observacao.value
      }).then(() => {
         alert("Dados do produto atualizado no banco de dados.")             
      }).catch((error)=> {
