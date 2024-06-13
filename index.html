@@ -1,402 +1,53 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>App-Inventário</title>
+  <meta charset="utf-8">
+  <title>Barra de pesquisa com autocomplete</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
+
 <body>
-    <div id="formulario" class="fundo">
-        <h1>Inventario - Disk</h1>
-        
-    
-        <!--<label>N° item</label><input id="Rollbox" type="text"><br><br>-->
-        <label for="Namebox">BEBIDAS</label>
-        <select id="Namebox">
-            <optgroup label="-------------------------------ÁGUAS/REFRIGERANTES-------------------------------">
-                <option>AGUA ACQUISSIMA C/GAS 1,5L</option>
-                <option>AGUA ACQUISSIMA C/GAS 310ML</option>
-                <option>AGUA ACQUISSIMA C/GAS 350ML</option>
-                <option>AGUA ACQUISSIMA S/GAS 310ML</option>
-                <option>AGUA ACQUISSIMA S/GAS 350ML</option>
-                <option>AGUA CRYSTAL C/GAS 350ML</option>
-                <option>AGUA CRYSTAL S/GAS 350ML</option>
-                <option>AGUA MINALBA S/GAS 510ML</option>
-                <option>AGUA PASSA QUATRO S/GAS 510ML</option>
-                <option>AGUA TONICA ANTAR 1L</option>
-                <option>AGUA TONICA ANTAR 350ML</option>
-                <option>AGUA TONICA ANTAR DIET 350ML</option>
-                <option>AGUA TONICA ANTAR GENGIBRE 269ML</option>
-                <option>AGUA TONICA ANTAR LIMOES 269ML</option>
-                <option>AGUA TONICA ANTAR ZERO 1L</option>
-                <option>AGUA TONICA ANTAR ZERO 350ML</option>
-                <option>AGUA TONICA FYS 350ML</option>
-                <option>AGUA TONICA FYS ZERO 350ML</option>
-                <option>AGUA TONICA SCHW 250ML</option>
-                <option>AGUA TONICA SCHW 350ML</option>
-                <option>AGUA TONICA SCHW S/ AÇUCAR 350ML</option>
-                <option>AGUA TONICA VERMONT 1L</option>
-                <option>AGUA TONICA VERMONT 310ML</option>
-                <option>CLASH'D FRUTAS VERMELHAS 269ML</option>
-                <option>CLASH'D LIMAO 269ML</option>
-                <option>CLASH'D MAÇÃ 269ML</option>
-                <option>COCA COLA 250ML</option>
-                <option>COCA COLA 350ML</option>
-                <option>COCA COLA 600ML</option>
-                <option>COCA COLA ZERO 250ML</option>
-                <option>COCA COLA ZERO 350ML</option>
-                <option>DOLLY 2L</option>
-                <option>FANTA GUARANA 350ML</option>
-                <option>FYS GUARANA 350ML</option>
-                <option>FYS LARANJA 350ML</option>
-                <option>FYS LIMAO 350ML</option>
-                <option>GUARANA ANTAR 350ML</option>
-                <option>GUARANA ANTAR DIET 350ML</option>
-                <option>GUARANA ANTAR ZERO 350ML</option>
-                <option>GUARAVITA 290ML</option>
-                <option>H2OH CITRUS 500ML</option>
-                <option>H2OH LIMAO 500ML</option>
-                <option>H2OH LIMONETO 500ML</option>
-                <option>PEPSI BLACK 200ML</option>
-                <option>PEPSI COLA 2L</option>
-                <option>SUKITA 2L</option>
-                <option>SCHWEPPES CITRUS 350ML</option>
-                <option>SCHWEPPES CITRUS LEVE EM AÇÚCARES 350ML</option>
-                <option>ITUBAINA 355ML</option>
-                <option>SPRITE 310ML</option>
-                <option>SPRITE 350ML</option>
-                <option>SPRITE 510ML</option>
-                <option>SPRITE LEMOM FRESH 355</option>
-                <option>SUKITA 2L</option>
-            </optgroup>
-            <optgroup label="------------------------------------CERVEJAS--------------------------------------------------------------">
-                <option>AMSTEL 350ML</option>
-                <option>AMSTEL ULTRA 350ML</option>
-                <option>AMSTEL LARGE ULTRA 275ML</option>
-                <option>AMSTEL VIBES FRUIT PUNCH 269ML</option>
-                <option>Austria DUNKEL PURO MALTE 600ML</option>
-                <option>AUSTRIA LAGER PURO MALTE 355ML</option>
-                <option>BADEN AMERIC 600ML</option>
-                <option>BADEN CRISTAL 350ML</option>
-                <option>BADEN CRISTAL 600ML</option>
-                <option>BADEN GOLDEN 350ML</option>
-                <option>BADEN GOLDEN 600ML</option>
-                <option>BADEN IPA MARACUJA 350ML</option>
-                <option>BADEN IPA MARACUJA 600ML</option>
-                <option>BADEN PEACH 600ML</option>
-                <option>BADEN PILCRIST 600ML</option>
-                <option>BADEN WITBIER 600ML</option>
-                <option>BLUE MOON 355ML</option>
-                <option>BRAHMA MALZBIER 350ML</option>
-                <option>DUNKEL 600ML</option>
-                <option>DRY STOUT 473ML</option>
-                <option>DARK LAGER CUMARU 1L</option>
-                <option>EISENBAHN IPA 355ML</option>
-                <option>ESTRELLA GALICIA PILSEN 355ML</option>
-                <option>GERMAN PILSEN 355ML</option>
-                <option>GERMAN PILSEN 600ML</option>
-                <option>HEFE WEIZEN 600ML</option>
-                <option>HEINEKEN 0,0% 330ML</option>
-                <option>HEINEKEN 350ML</option>
-                <option>HEINEKEN LONGNECK 330ML</option>
-                <option>HEINEKEN PIL 330ML</option>
-                <option>HEINEKEN PIL 600ML</option>
-                <option>IMPERIO GOLD 330ML</option>
-                <option>KRUG 20 600ML</option>
-                <option>KRUG CALUNIA 500ML</option>
-                <option>KRUG IGNORANCIA 500ML</option>
-                <option>KRUG INOCENCIA 500ML</option>
-                <option>KRUG LAGER 355ML</option>
-                <option>KRUG RANCOR 500ML</option>
-                <option>KRUG REMORSO 500ML</option>
-                <option>KRUG SUBMISSAO 500ML</option>
-                <option>LAGUNITAS IPA 335ML</option>
-                <option>STRAAT IPA 600ML</option>
-                <option>STRAAT PALE 600ML</option>
-                <option>STRAAT PEROLA NEGRA 600ML</option>
-                <option>STRAAT PILSEN 600ML</option>
-                <option>STRAAT RED ALE 600ML</option>
-                <option>STRAAT WEISS 600ML</option>
-                <option>STRAAT WITBIER 600ML</option>
-                <option>THEREZÓPOLIS LN 355ML</option>
-                <option>WIENBIER 56 BLACK 473ML</option>
-                <option>YELLOW 335ML</option>
-            </optgroup>
-            <optgroup label="------------------OUTRAS--------------------------------">
-                <option>51 DESCARTAVEL 965ML</option>
-                <option>51 ICE 275ML</option>
-                <option>51 ICE MARACUJA 275ML</option>
-                <option>ABSOLUT EXTRAKT 750ML</option>
-                <option>APERITIVO AMARO RAMAZZOTTI 700ML</option>
-                <option>APERITIVO APEROL 750ML</option>
-                <option>APERITIVO BITTER CAMPARY 900ML</option>
-                <option>APERITIVO BITTER CAMPARY MILANO 998ML</option>
-                <option>APERITIVO FERNET FENETTI 900ML DUBAR</option>
-                <option>APERITIVO JAGERMEISTER 700ML</option>
-                <option>APERITIVO ROSATO RAMAZZOTTI 700ML</option>
-                <option>BARRIL HEINEKEN 30L</option>
-                <option>BARRIL HEINEKEN 50L</option>
-                <option>BEB LACTEA ZERO 3560G</option>
-                <option>BITTER ANGOSTURA AROMATIC 100ML</option>
-                <option>BITTER ANGOSTURA ORANGE 100ML</option>
-                <option>CACHAÇA ASA BRANCA 980ML</option>
-                <option>CACHAÇA BATISTA AMBURANA 700ML</option>
-                <option>CACHAÇA BATISTA CARVALHO 700ML</option>
-                <option>CACHAÇA BATISTA PRATA 700ML</option>
-                <option>CACHAÇA BOAZINHA 700ML</option>
-                <option>CACHAÇA CANINHA RESERVA 51 700ML</option>
-                <option>CACHAÇA CANINHA RESERVA 51 RARA 700ML</option>
-                <option>CACHAÇA CANINHA RESERVA 51 SINGULAR 700ML</option>
-                <option>CACHAÇA CASTANHEIRA 700ML</option>
-                <option>CACHAÇA ESPIRITO DE MINAS 700ML</option>
-                <option>CACHAÇA JANEIRO 700ML</option>
-                <option>CACHAÇA PIRASSUNUNGA 965ML</option>
-                <option>CACHAÇA SALINAS TRAD 600ML</option>
-                <option>CACHAÇA SALINAS UMBURANA LUXO 700ML</option>
-                <option>CACHAÇA SELETA OURO 1000ML</option>
-                <option>CACHAÇA SELETA PRATA 1000ML</option>
-                <option>CACHAÇA SEPULTURA 700ML</option>
-                <option>CACHAÇA VELHO BARREIRO 910ML</option>
-                <option>CHOPP AMSTEL LAGER</option>
-                <option>CHOPP BADEN IPA</option>
-                <option>CHOPP BLUE MOON</option>
-                <option>CHOPP HEINEKEN PILSEN</option>
-                <option>CHOPP LAGUNITAS IPA</option>
-                <option>CHOPP STRAAT RUBI</option>
-                <option>CONHAQUE FUNDADOR IMPORTADO 750ML</option>
-                <option>CONHAQUE HINE 700ML</option>
-                <option>CONHAQUE MARTELL 700ML</option>
-                <option>COQUETEL COMPOSTO DOMECQ 12X1L</option>
-                <option>ENERGETICO APPLE DREAM</option>
-                <option>ENERGETICO MAGO LOCO 473ML</option>
-                <option>ENERGETICO MONSTER 269ML</option>
-                <option>ENERGETICO RED BULL 250ML</option>
-                <option>ENERGETICO RED BULL TROPICAL 250ML</option>
-                <option>ENERGETICO ULT PARADISE 269ML</option>
-                <option>ENERGETICO ULTRA WATERMELON 473ML</option>
-                <option>ENERGETICO VIBE ENERGY 250ML</option>
-                <option>ESPUMANTE CAMPO LARGO BRUT 750ML</option>
-                <option>ESPUMANTE CAMPO LARGO MOSCATEL ROSE 750ML</option>
-                <option>ESPUMANTE CASA PERINI BRUT 750ML</option>
-                <option>ESPUMANTE CASA PERINI ICE ROSE 750ML</option>
-                <option>ESPUMANTE CASA PERINI ROSE 750ML</option>
-                <option>ESPUMANTE CASA PERINI BRUT CHARMAT</option>
-                <option>ESPUMANTE CASA PERINI BRUT ROSE</option>
-                <option>ESPUMANTE MIOLO BRUT 750ML</option>
-                <option>ESPUMANTE PROSECCO SALTON BRUT 750ML</option>
-                <option>ESPUMANTE SALTON SERIES BRUT 750ML</option>
-                <option>ESPUMANTE TERRANOVA BRUT BCO 750ML</option>
-                <option>ESPUMANTE TERRANOVA BRUT ROSE 750ML</option>
-                <option>ESPUMANTE VEUVE DEVIENNE BRUT 750ML</option>
-                <option>GIN BEEFEATER 24 750ML</option>
-                <option>GIN BEEFEATER LONDON 750ML</option>
-                <option>GIN BEEFEATER PINK 750ML</option>
-                <option>GIN BOMBAY SAPPHIRE 750ML</option>
-                <option>GIN BULLDOG 750ML</option>
-                <option>GIN TANQUERAY 750ML</option>
-                <option>ISOTONICO POWERADE LARANJA 500ML</option>
-                <option>ISOTONICO POWERADE LIMAO 500ML</option>
-                <option>ISOTONICO POWERADE MOUNTAIN 500ML</option>
-                <option>ISOTONICO POWERADE UVA S CAP 500ML</option>
-                <option>KIT GIN TONICA ESPEC</option>
-                <option>KIT KRUG - AMERICAN DOUBLE IPA 600ML</option>
-                <option>KIT KRUG TAÇA 500ML</option>
-                <option>KIT L W JACK DANIELS</option>
-                <option>LICOR 43 DIEGO ZAMORA 700ML</option>
-                <option>LICOR AMARETTO 700ML</option>
-                <option>LICOR AMARULA 750ML</option>
-                <option>LICOR BAILEYS 750ML</option>
-                <option>LICOR CACAU 900ML</option>
-                <option>LICOR COINTREAU 700ML</option>
-                <option>LICOR CREME CAFÉ KAHLUA 1L</option>
-                <option>LICOR CREME CAFÉ KAHLUA 750ML</option>
-                <option>LICOR GRAND MARNIER ROUGE 700ML</option>
-                <option>LICOR LIMONCELLO 750ML</option>
-                <option>LICOR MARIE BLIZARD CURACAU 700ML</option>
-                <option>LICOR MARIE BLIZARD PESSEGO 700ML</option>
-                <option>LICOR MARIE BLIZARD TRIPLE SEC 700ML</option>
-                <option>LICOR PESSEGO STOCK 720ML</option>
-                <option>LICOR RICHARD 1L</option>
-                <option>MARTINI VERMOUTH BIANCO 750ML</option>
-                <option>MARTINI VERMOUTH DRY 750ML</option>
-                <option>MARTINI VERMOUTH ROSSO 750ML</option>
-                <option>MOSCOW MULE 750ML</option>
-                <option>MOSCOW MULE CONCENTRADO 270G</option>
-                <option>NECTAR DELVALE UVA 290ML</option>
-                <option>NEGRONI 750ML</option>
-                <option>RUM HAVANA CLUB 7 ANOS 700ML</option>
-                <option>RUM HAVANA CLUB 3 ANOS 700ML</option>
-                <option>RUM MONTILLA CARTA BRANCA 1L</option>
-                <option>RUM MONTILLA CARTA OURO 36 1L</option>
-                <option>RUM MONTILLA CRISTAL 1L</option>
-                <option>SAKE AZUMA KIRIN 600ML</option>
-                <option>SAKE AZUMA SOF 740ML</option>
-                <option>SAKE SAKAI 750ML</option>
-                <option>SMIRNOFF ICE 275ML</option>
-                <option>STEINHAEGER BECOSA 980ML</option>
-                <option>SUCO DE TOMATE</option>
-                <option>SUCO DEL VALLE LARANJA 1L</option>
-                <option>SUCO DEL VALLE MANGA 1L</option>
-                <option>SUCO GRAVIOLA 1L</option>
-                <option>SUCO LARANJA PRATS 1,7L</option>
-                <option>TEQUILA ALTOS PRATA 750ML</option>
-                <option>TEQUILA DON JULIO BLANCO 750ML</option>
-                <option>TEQUILA GILA 750ML</option>
-                <option>TEQUILA JOSE CUERVO OURO 750ML</option>
-                <option>TEQUILA JOSE CUERVO PRATA 750ML</option>
-                <option>TEQUILA JOSE CUERVO REPOSADO 750ML</option>
-                <option>TEQUILA MILAGRO 750ML</option>
-                <option>VERMUT CINZANO 1L</option>
-                <option>VERMUT PUNTA MES CARPANO 1L</option>
-                <option>VODKA ABSOLUT 1L</option>
-                <option>VODKA ABSOLUT 750ML</option>
-                <option>VODKA ABSOLUT ELYX 4,5L</option>
-                <option>VODKA ABSOLUT EXTRAKT 750ML</option>
-                <option>VODKA ABSOLUT RASPBERRY 1L</option>
-                <option>VODKA ABSOLUT VANILLA 750ML</option>
-                <option>VODKA CIROC 750ML</option>
-                <option>VODKA ED HARDY 1L</option>
-                <option>VODKA GREY GOOSE 750ML</option>
-                <option>VODKA KETEL ONE 1L</option>
-                <option>VODKA ORLOFF 1L</option>
-                <option>VODKA SMIRNOFF ICE LONG NECK 275ML</option>
-                <option>WHISKY BALLANTINES 1L</option>
-                <option>WHISKY BALLANTINES 750ML</option>
-                <option>WHISKY BLACK LABEL 1L</option>
-                <option>WHISKY BUCHANANS 1L</option>
-                <option>WHISKY BUCHANANS DELUX</option>
-                <option>WHISKY CHIVAS 12 750L</option>
-                <option>WHISKY CHIVAS 12 1L</option>
-                <option>WHISKY CHIVAS 13 750ML</option>
-                <option>WHISKY CHIVAS 13 1L</option>
-                <option>WHISKY CHIVAS 15 750ML</option>
-                <option>WHISKY CHIVAS 15 1L</option>
-                <option>WHISKY GLENLIVET 750ML</option>
-                <option>WHISKY JACK DANIELS 1L</option>
-                <option>WHISKY JACK DANIELS HONEY 1L</option>
-                <option>WHISKY JAMESON 750ML</option>
-                <option>WHISKY JAMESON IPA 750ML</option>
-                <option>WHISKY JOHNNIE WALKER BLOND 750ML</option>
-                <option>WHISKY ROYAL SALUTE 21 ANOS 700ML</option>
-                <option>WHISKY WALKER BLACK</option>
-                <option>WHISKY WALKER RED</option>
-                <option>XAROPE DILUTE MACA</option>
-                <option>XAROPE MATHIEU TEISSEIRE RASPBERRY 700ML</option>
-                <option>XAROPE MONIN CARAMELO 700ML</option>
-                <option>XAROPE MONIN CRANBERRY 700ML</option>
-                <option>XAROPE MONIN GRENADINI 700ML</option>
-                <option>XAROPE MONIN MAÇA VERDE 700ML</option>
-                <option>XAROPE MONIN TANGERINA 700ML</option>
-            </optgroup>
-            <optgroup label="---------------------VINHO-----------------------">
-                <option>ALAMOS MALBEC</option>
-                <option>ALAMOS RED BLEND</option>
-                <option>ALMA NEGRA</option>
-                <option>CARMEN INSIGNE CARMENERE</option>
-                <option>CATENA MALBEC</option>
-                <option>CRIOS ROSE</option>
-                <option>DV CATENA CABERNET MALBEC</option>
-                <option>EL ENEMIGO MALBEC</option>
-                <option>EL VIAJERO BONARDA</option>
-                <option>EL VIAJERO CABERNET SAUVGNON</option>
-                <option>EL VIAJERO CHARDONNAY</option>
-                <option>EL VIAJERO MALBEC</option>
-                <option>EL VIAJERO MALBEC ROSE</option>
-                <option>FINCA GABRIEL MERLOT</option>
-                <option>FLOR DE CRASTO TINTO</option>
-                <option>GOULEYANT MALBEC CAHORS</option>
-                <option>KALFU SAUVIGNON BLANC</option>
-                <option>LEVITY VINHO VERDE</option>
-                <option>LOMAS DEL MARQUES</option>
-                <option>PRIMITIVO LEVORATO PUGLIA</option>
-                <option>QUINTA DAS MURÇAS ASSOBIO TINTO</option>
-                <option>QUINTA DO CRASTO TINTO 375ML</option>
-                <option>QUINTA DOS BONS VENTOS</option>
-                <option>QUINTA DOS BONS VENTOS TINTO</option>
-                <option>QUNQAY MALBEC</option>
-                <option>SAN LORENZO ANTICO GAURO MERLOT</option>
-                <option>VINHO ARG TORO MALBEC 750ML</option>
-                <option>VINHO BRANCO CHARDONNAY</option>
-                <option>VINHO BRANCO COZIMENTO</option>
-                <option>VINHO BRANCO KALFU RESERA MOLU SAUV BLANC 750ML</option>
-                <option>VINHO BRANCO LILLET 750ML</option>
-                <option>VINHO CABERNET 750ML</option>
-                <option>VINHO CHARDONNAY 750ML</option>
-                <option>VINHO CHILENO CARMENERE 750ML</option>
-                <option>VINHO CRIOS ROSE DE MALBEC 750ML</option>
-                <option>VINHO ITA GAURO MERLOT 750ML</option>
-                <option>VINHO ITA LEVORATO 750ML</option>
-                <option>VINHO JORGE RUBIO FINCA GABRIEL MERLOT ROBLE </option>
-                <option>VINHO KUTRAL SAUVIGNON BLANC 1L</option>
-                <option>VINHO LEVITY VERDE BRANCO BC750</option>
-                <option>VINHO LOMAS DMARQUES 750ML</option>
-                <option>VINHO MIOLO RESER PINOT NOIR 750ML</option>
-                <option>VINHO ROSE BONS VENTOS 750ML</option>
-                <option>VINHO ROSE BONS VENTOS FRESH 750ML</option>
-                <option>VINHO ROSE LILLET 750ML</option>
-                <option>VINHO TEMPRANILLO 750ML</option>
-                <option>VINHO TINTO ALAMOS 2022 750ML</option>
-                <option>VINHO TINTO ALAMOS MALBEC 2021</option>
-                <option>VINHO TINTO ALAMOS RED BLEND 2021</option>
-                <option>VINHO TINTO ALAMOS RED BLEND 2022</option>
-                <option>VINHO TINTO ALMA NEGRA 2019</option>
-                <option>VINHO TINTO ASSOBIO DOURO 750ML</option>
-                <option>VINHO TINTO BONS VENTOS 375</option>
-                <option>VINHO TINTO BONS VENTOS 750ML</option>
-                <option>VINHO TINTO CABERNET MALBEC 2020</option>
-                <option>VINHO TINTO CABERNET SAUVIGNON 2018</option>
-                <option>VINHO TINTO CARMEN INS CARMENERE 2021</option>
-                <option>VINHO TINTO CASTRO DOURO 375ML</option>
-                <option>VINHO TINTO CATENA MALBEC 2019 </option>
-                <option>VINHO TINTO COZIMENTO</option>
-                <option>VINHO TINTO CRIOS MALBEC 750ML</option>
-                <option>VINHO TINTO ENEMIGO MALBEC 2019</option>
-                <option>VINHO TINTO FLOR DE CASTRO 375ML</option>
-                <option>VINHO TINTO FLOR DE CASTRO 750ML</option>
-                <option>VINHO TINTO GOULEYANT MALBEC 2019</option>
-                <option>VINHO TINTO GOULEYANT TINTO 750ML</option>
-                <option>VINHO TINTO HSM COLHEITA SELEC BCO 750ML</option>
-                <option>VINHO TINTO JORGE RUBIO </option>
-                <option>VINHO TINTO KALFU RESERVA MOLU PINOT NOIR 750ML</option>
-                <option>VINHO TINTO SECO BONARDA VARIETAL</option>
-                <option>VINHO TINTO SECO CABERNET SAUVIG VARIETAL</option>
-                <option>VINHO TINTO SECO MALBEC ROSE VARIETAL</option>
-                <option>VINHO TINTO SECO MALBEC VARIETAL</option>
-                <option>VINHO TINTO SUAVE ANGELICA ZAPATA CABERNET SAUVIGNON 2018 750ML</option>
-                <option>VINHO TINTO VENTISQUERO RESERVA CAB SAUVIG 750 ML</option>
-                <option>VINHO TINTO VENTISQUERO RESERVA CARMENERE 750ML</option>
-                <option>VINHO TINTO VENTISQUERO RESERVA PINOT NOIR 750ML</option>
-                <option>VINHO TORO CENTENARIO MALBEC 750ML</option>
-                <option>VINHO TORO CENTENARIO ROSE 750ML</option>
-            </optgroup>
-          </select>
+  <div class="container">
+    <h1>Inventário Disk</h1>
+    <h2>Produto</h2>
+    <div class="search">
+      <a href="" target="_blank" hidden></a>
+      <input type="text" id="Namebox" placeholder="Digite o nome do produto...">
+      <div class="list">
+      </div>
+      <div class="icon"><ion-icon name="search-outline"></ion-icon></div>
+    </div>
 
 
 
-         
-        <label for="Secbox">Unidade</label>
-        <input id="Secbox" type="number" placeholder="0">
-        <label for="ml">ml</label>
-        <input id="ml" type="number" placeholder="0">
-        <label for="kg">Kg</label>
-        <input id="kg" type="number" placeholder="0.0">
-        <label for="fabricado">Fabricado</label>
-        <input id="fabricado" type="date">
-        <label for="validade">Validade</label>
-        <input id="validade" type="date">
-        <label for="obs">Observação</label>
-        <input id="obs" type="text" placeholder="obs:">
-    
-        <hr>
-        <button id="Insbtn">Enviar</button>
-       
-        <button id="Selbtn">Visualizar</button>
-        
-        
-        <li>Visualizar: digite o nome do produto e depois clique em visualizar (só será visualizado caso foi enviado)</li>
-    
-</div>    
-    <script type="module" src="index.js"></script>
+    <label for="Secbox">Unidade</label>
+    <input id="Secbox" type="number" placeholder="0">
+    <label for="ml">ml</label>
+    <input id="ml" type="number" placeholder="0">
+    <label for="kg">Kg</label>
+    <input id="kg" type="number" placeholder="0.0">
+    <label for="fabricado">Fabricado</label>
+    <input id="fabricado" type="date">
+    <label for="validade">Validade</label>
+    <input id="validade" type="date">
+    <label for="obs">Observação</label>
+    <input id="obs" type="text" placeholder="obs:">
+
+    <hr>
+    <button id="Insbtn">Enviar</button>
+   
+    <button id="Selbtn">Visualizar</button>
+  </div>
+
+  <script src="sugestoes.js"></script>
+  <script src="script.js"></script>
+  <script type="module" src="index.js"></script>
+  
+
 </body>
+
 </html>
