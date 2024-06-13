@@ -123,6 +123,15 @@ hr {
   width: 400px;
 }
 
+#Secbox,
+#ml,
+#kg {
+  width: 90px;
+  text-align: center;
+  font-size: 20px;
+}
+
+
 .container button {
   padding: 5px;
   margin: 5px;
