@@ -25,7 +25,6 @@ const db = getDatabase();
 //--------------Referencias----------------------------------------------//
 
 var produto = document.getElementById("Namebox")
-var alimentos = document.getElementById("Alimentosbox")
 var unidade = document.getElementById("Secbox")
 
 var ml = document.getElementById("ml")
