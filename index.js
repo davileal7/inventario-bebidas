@@ -44,8 +44,8 @@ var selBtn = document.getElementById("Selbtn")
 //--------------ENVIAR----------------------------------------------//
 function InserirDado(){
     set(ref(db, "Bebidas/"+ produto.value), {
-        Unidade: unidade.value,
-        ml: ml.value,
+        Estoque_Atual: unidade.value,
+        Litros: ml.value,
         kg: kg.value,
         Fabricado: fabricado.value,
         Validade: validade.value,
@@ -65,8 +65,8 @@ function SelectData(){
 
     get(child(dbref,"Bebidas/"+ produto.value)).then((snapshot) => {
         if(snapshot.exists()){
-            unidade.value = snapshot.val().Unidade;
-            ml.value = snapshot.val().ml;
+            unidade.value = snapshot.val().Estoque_Atual;
+            ml.value = snapshot.val().Litros;
             kg.value = snapshot.val().kg;
             fabricado.value = snapshot.val().Fabricado;
             validade.value = snapshot.val().Validade;
