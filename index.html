@@ -10,36 +10,41 @@
 </head>
 
 <body>
-  <div class="container">
-    <h1>Inventário Disk</h1>
-    <h2>Bebidas</h2>
-    <div class="search">
-      <a href="" target="_blank" hidden></a>
-      <input type="text" id="Namebox" placeholder="Digite o nome da bebida...">
-      <div class="list">
+  <form action="post" id="myForm">
+  
+    <div class="container">
+      <h1>Inventário Disk</h1>
+      <h2>Bebidas</h2>
+      <div class="search">
+        <a href="" target="_blank" hidden></a>
+        <input type="text" id="Namebox" placeholder="Digite o nome da bebida...">
+        <div class="list">
+        </div>
+        <div class="icon"><ion-icon name="search-outline"></ion-icon></div>
       </div>
-      <div class="icon"><ion-icon name="search-outline"></ion-icon></div>
+  
+  
+      <label for="Secbox">Estoque Atual</label>
+      <input id="Secbox" type="number" placeholder="0">
+      <label for="ml">Litros</label>
+      <input id="ml" type="number" placeholder="0.0">
+      <label for="kg">Kg</label>
+      <input id="kg" type="number" placeholder="0.0">
+      <label for="fabricado">Fabricado</label>
+      <input id="fabricado" type="date">
+      <label for="validade">Validade</label>
+      <input id="validade" type="date">
+      <label for="obs">Observação</label>
+      <input id="obs" type="text" placeholder="obs:">
+  
+      <hr>
+<p>OBS: Verifique se o primeiro campo foi preenchido</p>
+
+      <button id="Insbtn">Enviar</button>
+  
+      <button id="Selbtn">Visualizar</button>
     </div>
-
-
-    <label for="Secbox">Estoque Atual</label>
-    <input id="Secbox" type="number" placeholder="0">
-    <label for="ml">Litros</label>
-    <input id="ml" type="number" placeholder="0.0">
-    <label for="kg">Kg</label>
-    <input id="kg" type="number" placeholder="0.0">
-    <label for="fabricado">Fabricado</label>
-    <input id="fabricado" type="date">
-    <label for="validade">Validade</label>
-    <input id="validade" type="date">
-    <label for="obs">Observação</label>
-    <input id="obs" type="text" placeholder="obs:">
-
-    <hr>
-    <button id="Insbtn">Enviar</button>
-   
-    <button id="Selbtn">Visualizar</button>
-  </div>
+</form>
 
   <script src="sugestoes.js"></script>
   <script src="script.js"></script>

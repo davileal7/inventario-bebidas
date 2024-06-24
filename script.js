@@ -14,7 +14,6 @@ inputBox.onkeyup = (e)=>{
     if(userData){
         icon.onclick = ()=>{
            
-            
             linkTag.click();
         }
         emptyArray = suggestions.filter((data)=>{

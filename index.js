@@ -39,8 +39,6 @@ var selBtn = document.getElementById("Selbtn")
 
 
 
-
-
 //--------------ENVIAR----------------------------------------------//
 function InserirDado(){
     set(ref(db, "Bebidas/"+ produto.value), {
@@ -55,6 +53,16 @@ function InserirDado(){
     }).catch((error)=> {
         alert("falha, error"+error)
     })
+
+   
+
+    produto.value = ""
+    unidade.value = ""
+    ml.value = ""
+    kg.value = ""
+    fabricado.value = ""
+    validade.value = ""
+    observacao.value = ""
 }
 
 
