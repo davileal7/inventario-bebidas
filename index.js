@@ -47,21 +47,21 @@ function InserirDado(){
         return;
       }
 
-    set(ref(db, "Bebidas/"+ bebida.value), {
-        Estoque_Atual: unidade.value,
-        Litros: ml.value,
-        kg: kg.value,
-        Fabricado: fabricado.value,
-        Validade: validade.value,
+    set(ref(db, "Bebidas/ " + bebida.value + " | Estoque Atual: " + unidade.value + " | Litros: " 
+        + ml.value + " | Kg: " + kg.value + " | Fabricado: " + fabricado.value + " | Validade: " + validade.value
+    ), {
+        //Estoque_Atual: unidade.value,
+        //Litros: ml.value,
+        //kg: kg.value,
+        //Fabricado: fabricado.value,
+        //Validade: validade.value,
         Observacao: observacao.value
     }).then(() => {
        alert("Produto Bebida enviado") 
     }).catch((error)=> {
         alert("falha, error"+error)
     })
-
-   
-
+    
     bebida.value = ""
     unidade.value = ""
     ml.value = ""
@@ -70,7 +70,6 @@ function InserirDado(){
     validade.value = ""
     observacao.value = ""
 }
-
 
 //--------------Select Datas----------------------------------------------//
 
@@ -94,11 +93,6 @@ function SelectData(){
     })
 }
 
-//--------------UPDATE----------------------------------------------//
-
-
-//--------------DELETE----------------------------------------------//
- 
 
 insBtn.addEventListener('click', InserirDado)
 selBtn.addEventListener('click', SelectData)
