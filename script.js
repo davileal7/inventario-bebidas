@@ -9,8 +9,6 @@ inputBox.onkeyup = (e)=>{
     let userData = e.target.value; //user enetered data
     let emptyArray = [];
 
-    
-
     if(userData){
         icon.onclick = ()=>{
            

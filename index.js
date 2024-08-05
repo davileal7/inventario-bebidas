@@ -24,7 +24,7 @@ from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js"
 const db = getDatabase();
 //--------------Referencias----------------------------------------------//
 
-var produto = document.getElementById("Namebox")
+var bebida = document.getElementById("Namebox")
 var unidade = document.getElementById("Secbox")
 
 var ml = document.getElementById("ml")
@@ -41,7 +41,13 @@ var selBtn = document.getElementById("Selbtn")
 
 //--------------ENVIAR----------------------------------------------//
 function InserirDado(){
-    set(ref(db, "Bebidas/"+ produto.value), {
+
+    if (bebida.value === '') {
+        alert("Preencha o nome do produto!");
+        return;
+      }
+
+    set(ref(db, "Bebidas/"+ bebida.value), {
         Estoque_Atual: unidade.value,
         Litros: ml.value,
         kg: kg.value,
@@ -56,7 +62,7 @@ function InserirDado(){
 
    
 
-    produto.value = ""
+    bebida.value = ""
     unidade.value = ""
     ml.value = ""
     kg.value = ""
@@ -71,7 +77,7 @@ function InserirDado(){
 function SelectData(){
     const dbref = ref(db);
 
-    get(child(dbref,"Bebidas/"+ produto.value)).then((snapshot) => {
+    get(child(dbref,"Bebidas/"+ bebida.value)).then((snapshot) => {
         if(snapshot.exists()){
             unidade.value = snapshot.val().Estoque_Atual;
             ml.value = snapshot.val().Litros;
