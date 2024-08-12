@@ -13,8 +13,6 @@ const firebaseConfig = {
   appId: "1:30541203678:web:018b455f0dd95173305a4f"
 };
 
-
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
@@ -26,7 +24,6 @@ const db = getDatabase();
 
 var bebida = document.getElementById("Namebox")
 var unidade = document.getElementById("Secbox")
-
 var ml = document.getElementById("ml")
 var kg = document.getElementById("kg")
 var fabricado = document.getElementById("fabricado")
@@ -36,16 +33,14 @@ var observacao = document.getElementById("obs")
 var insBtn = document.getElementById("Insbtn")
 var selBtn = document.getElementById("Selbtn")
 
-
-
 //--------------ENVIAR----------------------------------------------//
+
 function InserirDado(){
 
     if (bebida.value === '') {
         alert("Preencha o nome do produto!!!");
         return;
       }
-
     set(ref(db, "Bebidas/" + bebida.value), {
         Estoque_Atual: unidade.value,
         Litros: ml.value,
@@ -58,7 +53,6 @@ function InserirDado(){
     }).catch((error)=> {
         alert("falha, error"+error)
     })
-    
     bebida.value = ""
     unidade.value = ""
     ml.value = ""
@@ -83,13 +77,12 @@ function SelectData(){
             observacao.value = snapshot.val().Observacao;
         }
         else {
-            alert("Produto não encontrado, digite o mesmo nome que foi enviado.")
+            alert("Produto NÃO encontrado, digite o mesmo nome que foi enviado.")
         }
     }).catch((error) => {
         alert("falha, error"+error);
     })
 }
-
 
 insBtn.addEventListener('click', InserirDado)
 selBtn.addEventListener('click', SelectData)
