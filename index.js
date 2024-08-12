@@ -33,7 +33,6 @@ var fabricado = document.getElementById("fabricado")
 var validade = document.getElementById("validade")
 var observacao = document.getElementById("obs")
 
-
 var insBtn = document.getElementById("Insbtn")
 var selBtn = document.getElementById("Selbtn")
 
@@ -47,17 +46,15 @@ function InserirDado(){
         return;
       }
 
-    set(ref(db, "Bebidas/ " + bebida.value + " | Estoque Atual: " + unidade.value + " | Litros: " 
-        + ml.value + " | Kg: " + kg.value + " | Fabricado: " + fabricado.value + " | Validade: " + validade.value
-    ), {
-        //Estoque_Atual: unidade.value,
-        //Litros: ml.value,
-        //kg: kg.value,
-        //Fabricado: fabricado.value,
-        //Validade: validade.value,
+    set(ref(db, "Bebidas/" + bebida.value), {
+        Estoque_Atual: unidade.value,
+        Litros: ml.value,
+        kg: kg.value,
+        Fabricado: fabricado.value,
+        Validade: validade.value,
         Observacao: observacao.value
     }).then(() => {
-       alert("Produto Bebida enviado") 
+       alert("Produto Bebida enviado.") 
     }).catch((error)=> {
         alert("falha, error"+error)
     })
@@ -86,7 +83,7 @@ function SelectData(){
             observacao.value = snapshot.val().Observacao;
         }
         else {
-            alert("Produto não encontrado, digite o mesmo nome que foi enviado")
+            alert("Produto não encontrado, digite o mesmo nome que foi enviado.")
         }
     }).catch((error) => {
         alert("falha, error"+error);
